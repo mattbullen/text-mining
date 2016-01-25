@@ -291,7 +291,7 @@ function getSentiments() {
     }
 }
 
-// Get the sentiment polarity for all reviews associated with a particular concept.
+// Gets the sentiment polarity for all reviews associated with a particular concept.
 function getSentiment(aggregateText, concept) {
     $.ajax({
         type: "POST",
@@ -316,7 +316,7 @@ function getSentiment(aggregateText, concept) {
     });
 }
 
-// Store the extracted concepts in the "reviews" window storage object.
+// Stores the extracted concepts in the "reviews" window storage object.
 function parseConcepts() {
     var data = window.reviews.concepts.sort(function (a, b) {
         if (a.support > b.support) { return -1; }
@@ -336,7 +336,7 @@ function parseConcepts() {
     }
 }
 
-// Finds the extractable concepts from the reviews.
+// Finds the extractable concepts in the reviews.
 function getConcepts() {
     $.ajax({
         type: "POST",
@@ -363,7 +363,7 @@ function getConcepts() {
     });
 }
 
-// Aggregate all reviews into a string.    
+// Aggregates all reviews into a string.    
 function aggregateReviews() {
     window.reviews.originalConcat = "";
     var review;
@@ -396,7 +396,7 @@ function getReviews() {
     parseReviews();
 }
 
-// I used this to download the original batch of 5000 reviews.
+// I used this to download the original batch of 5,000 reviews.
 function downloadReviewsJSON() {
     var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(window.reviews));
     var a = document.createElement('a');
@@ -407,7 +407,7 @@ function downloadReviewsJSON() {
     a.click();
 }
 
-// Remove special characters from the string used in the POST request.
+// Removes special characters from the string used in the POST request.
 // The API I used is very particular about which characters it will accept.
 function formatTextForPOST(text) {
     return "text=" + text.replace(/&#39;/gi, "'").replace(/&#34;/gi, "'").replace(/%/gi, " percent").replace("amp;", " and ").replace(/\\/gi, "").replace(/\//gi, "").replace(/\=\"/gi, "").replace(/\=/gi, "+").replace(/\#/gi, "").replace(/\"/gi, "").replace(/\…/gi, "").replace(/â/gi, "a").replace(/ç/gi, "c").replace(/è/gi, "e").replace(/é/gi, "e").replace(/ê/gi, "e").replace(/ë/gi, "e").replace(/î/gi, "i").replace(/û/gi, "u").replace("朝６時半からオープンしているので、朝食を食べに行くことが多いボッテガルイ。値段は少し高めだけれど、サービスも良く、店内も綺麗で、居心地がいい。おすすめは焼き立てのピザ。スイーツのお店でもあるので、最後のデザートも忘れずに頼んでみてね！", "").replace(/\，/gi, "+").replace(/\ù/gi, "u").replace("Lady Gaga", "Aerosmith").replace("vibrator", "").replace("sex", "").replace(/\s/g, "+");
