@@ -3,7 +3,7 @@
 // Cell: 212-882-1391
 
 // Since I'm not using Angular or any particular data modelling library, for demo purposes,
-// the window object is convenient place to store data about the reviews.
+// the window object is a convenient place to store data about the reviews.
 window.reviews = JSON.parse(decodeURIComponent(raw));
 
 $(document).ready(function initialize() {
