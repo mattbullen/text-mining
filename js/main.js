@@ -2,12 +2,11 @@
 // E-mail: mattbullenprogramming@gmail.com
 // Cell: 212-882-1391
 
-// I'm not using Angular or any particular data modelling library.
-// For demo purposes, the window object is convenient place to store data about the reviews.
+// Since I'm not using Angular or any particular data modelling library, for demo purposes,
+// the window object is convenient place to store data about the reviews.
 window.reviews = JSON.parse(decodeURIComponent(raw));
 
 $(document).ready(function initialize() {
-    //console.log(formatTextForPOST(window.reviews.originalConcat).substring(356920, 356925));
     parseReviews();
 });
 
@@ -15,7 +14,7 @@ $(document).ready(function initialize() {
 function parseReviews() {
 
     // To reduce loading time and to avoid burdening the Yelp.com servers, the reviews are loaded 
-    // from the rawData.js file. getReviews() was how I first scraped them.
+    // from the rawData.js file. The getReviews() function was how I first scraped them.
     // getReviews();
     aggregateReviews();
     getConcepts();
