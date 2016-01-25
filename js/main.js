@@ -20,7 +20,7 @@ function parseReviews() {
     getConcepts();
     parseConcepts();
     
-    // A quick form of Angular-esque dirty checking to ensure that the data is ready to use before rending the graph.
+    // A quick form of Angular-esque dirty checking to ensure that the data is ready to use before rendering the graph.
     var sentimentsCheck = window.setInterval(function() {
         if (window.reviews.parsedConcepts && window.reviews.parsedConcepts[0] && window.reviews.parsedConcepts[0].support) {
             getSentiments();
