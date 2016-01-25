@@ -28,6 +28,11 @@ body {
     margin-top: 50px;
 }
 
+#loading {
+    width: 220px;
+    margin: 50px auto 0 auto;
+}
+
 #tooltipContainer {
     cursor: pointer;
     background: #fff;
