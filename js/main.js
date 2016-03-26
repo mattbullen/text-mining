@@ -410,7 +410,7 @@ function downloadReviewsJSON() {
 // Removes special characters from the string used in the POST request.
 // The API I used is very particular about which characters it will accept.
 function formatTextForPOST(text) {
-    return "text=" + text.replace(/&#39;/gi, "'").replace(/&#34;/gi, "'").replace(/%/gi, " percent").replace("amp;", " and ").replace(/\\/gi, "").replace(/\//gi, "").replace(/\=\"/gi, "").replace(/\=/gi, "+").replace(/\#/gi, "").replace(/\"/gi, "").replace(/\…/gi, "").replace(/â/gi, "a").replace(/ç/gi, "c").replace(/è/gi, "e").replace(/é/gi, "e").replace(/ê/gi, "e").replace(/ë/gi, "e").replace(/î/gi, "i").replace(/û/gi, "u").replace("朝６時半からオープンしているので、朝食を食べに行くことが多いボッテガルイ。値段は少し高めだけれど、サービスも良く、店内も綺麗で、居心地がいい。おすすめは焼き立てのピザ。スイーツのお店でもあるので、最後のデザートも忘れずに頼んでみてね！", "").replace(/\，/gi, "+").replace(/\ù/gi, "u").replace("Lady Gaga", "Aerosmith").replace("vibrator", "").replace("sex", "").replace(/\s/g, "+");
+    return "text=" + text.replace(/&#39;/gi, "'").replace(/&#34;/gi, "'").replace(/%/gi, " percent").replace("amp;", " and ").replace(/\\/gi, "").replace(/\//gi, "").replace(/\=\"/gi, "").replace(/\=/gi, "+").replace(/\#/gi, "").replace(/\"/gi, "").replace(/\…/gi, "").replace(/â/gi, "a").replace(/ç/gi, "c").replace(/è/gi, "e").replace(/é/gi, "e").replace(/ê/gi, "e").replace(/ë/gi, "e").replace(/î/gi, "i").replace(/û/gi, "u").replace("朝６時半からオープンしているので、朝食を食べに行くことが多いボッテガルイ。値段は少し高めだけれど、サービスも良く、店内も綺麗で、居心地がいい。おすすめは焼き立てのピザ。スイーツのお店でもあるので、最後のデザートも忘れずに頼んでみてね！", "").replace(/\，/gi, "+").replace(/\ù/gi, "u").replace("Lady Gaga", "Vivaldi").replace("vibrator", "").replace("sex", "").replace(/\s/g, "+");
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex
