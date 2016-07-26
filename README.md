@@ -2,4 +2,4 @@
 
 Using the [Aylien Text Analysis API](http://docs.aylien.com/).
 
-##### Live page: http://bullen.io/text-mining/index.html
+##### Live page: www.matthewbullen.net/text-mining/index.html
